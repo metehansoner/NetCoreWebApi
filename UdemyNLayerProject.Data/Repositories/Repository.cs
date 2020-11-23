@@ -10,10 +10,10 @@ using UdemyNLayerProject.Core.Repositories;
 namespace UdemyNLayerProject.Data.Repositories
 {
     
-    public class Repository<TEntity> : IRepository<TEntity> where TEntity : class
+    class Repository<TEntity> : IRepository<TEntity> where TEntity : class
     {
-        protected readonly DbContext _context;
-        private readonly DbSet<TEntity> _dbSet;
+        public readonly DbContext _context;
+        public readonly DbSet<TEntity> _dbSet;
 
         public Repository(DbContext context)
         {
